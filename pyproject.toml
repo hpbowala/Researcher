@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "researcher"
+version = "0.1.0"
+description = "A Python research project"
+authors = ["Researcher"]
+readme = "README.md"
+packages = [{include = "researcher", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+langchain = "^0.3.27"
+langgraph = "^0.6.6"
+langchain-openai = "^0.3.32"
+python-dotenv = "^1.1.1"
+pyyaml = "^6.0.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0.0"
+pytest-cov = "^4.0.0"
+black = "^23.0.0"
+isort = "^5.12.0"
+flake8 = "^6.0.0"
+mypy = "^1.0.0"
+pre-commit = "^4.3.0"
+types-pyyaml = "^6.0.12.20250822"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true

@@ -1,0 +1,29 @@
+# API Configuration
+api:
+  openai:
+    api_key: ${OPENAI_API_KEY:default_key}
+    model: ${OPENAI_MODEL:gpt-4.1}
+  
+  bright_data:
+    api_key: ${BRIGHT_DATA_API_KEY:your_bright_data_api_key_here}
+    base_url: ${BRIGHT_DATA_API_BASE:https://api.brightdata.com}
+    username: ${BRIGHT_DATA_USERNAME:your_username_here}
+
+  tavily:
+    api_key: ${TAVILY_API_KEY:default_key}
+
+# Application Configuration
+app:
+  environment: ${ENVIRONMENT:development}
+  log_level: ${LOG_LEVEL:INFO}
+  debug: ${DEBUG:true}
+
+# Database Configuration (if needed)
+database:
+  url: ${DATABASE_URL:sqlite:///researcher.db}
+  echo: ${DATABASE_ECHO:false}
+
+# Cache Configuration
+cache:
+  enabled: ${CACHE_ENABLED:true}
+  ttl: ${CACHE_TTL:3600} 
